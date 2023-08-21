@@ -1,0 +1,93 @@
+<!-- <h1>Password Generator</h1>
+
+<div>
+  <label>Password Length</label>
+  <input (change)="modifyLength($event)" type="text">
+</div>
+
+<div>
+  <label>Use Alphabet</label>
+  <input (change)="modifyLetters()" type="checkbox">
+</div>
+
+<div>
+  <label>Use Numbers</label>
+  <input (change)="modifyNumbers()" type="checkbox">
+</div>
+
+<div>
+  <label>Use Symbols</label>
+  <input (change)="modifySymbols()" type="checkbox">
+</div>
+
+<div>
+  <button [disabled]="!(length && (includeLetters || includeNumbers || includeSymbols))" 
+  (click)="buttonClick()">Generate</button>
+</div>
+
+<div>
+  <label>Password</label>
+  <input [value]="password">
+</div>
+ {{password}}
+
+{{getName()}} --> 
+
+<div class="mainArea my-6">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="box column is-one-third " >
+        <h1 class="title has-text-centered">Şifre Oluşturucu</h1>
+  
+        <div class="field">
+          <label>Şifre Uzunluğu</label>
+          <input class="input" (change)="modifyLength($event)" />
+        </div>
+  
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input (change)="modifyLetters()" type="checkbox" />
+              Alfabeyi Kullan
+            </label>
+          </div>
+        </div>
+  
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input (change)="modifyNumbers()" type="checkbox" />
+              Sayıları Kullan
+            </label>
+          </div>
+        </div>
+  
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input (change)="modifySymbols()" type="checkbox" />
+              Sembolleri Kullan
+            </label>
+          </div>
+        </div>
+  
+        <button
+          [disabled]="
+            !(length && (includeLetters || includeSymbols || includeNumbers))
+          "
+          [disabled]="!length"
+          (click)="buttonClick()"
+          class="button is-link is-fullwidth"
+        >
+         Oluştur
+        </button>
+  
+        <div class="box my-6" *ngIf="password">
+          <label>Şifreniz</label>
+          <input class="input" [value]="password" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
