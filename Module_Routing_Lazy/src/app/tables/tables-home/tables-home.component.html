@@ -1,0 +1,26 @@
+<app-divider>
+    Memnuniyet Anketi
+</app-divider>
+<app-table></app-table>
+
+
+<app-divider>
+    
+    Ekstra Bilgiler
+</app-divider>
+<app-tabs>
+    <a 
+    routerLinkActive="active" 
+    [routerLinkActiveOptions]="{exact : true}" 
+    routerLink="./" 
+    class="item">
+      Bio
+    </a>
+    <a routerLinkActive="active" routerLink="./companies" class="item">
+      Companies
+    </a>
+    <a routerLinkActive="active" routerLink="./partners" class="item">
+      Partners
+    </a>
+</app-tabs>
+

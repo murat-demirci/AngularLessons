@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "email": "can@hotmail.com",
+      "username": "canboz",
+      "password": "12345678",
+      "id": 1
+    }
+  ],
+  "questions": [
+    {
+      "username": "canboz",
+      "question": "Test Soru",
+      "solutions": [
+        {
+          "username": "canboz",
+          "solution": "sdasdsadasd",
+          "plus": [],
+          "minus": [
+            1
+          ]
+        },
+        {
+          "username": "canboz",
+          "solution": "Test",
+          "plus": [],
+          "minus": []
+        }
+      ],
+      "id": 1
+    },
+    {
+      "username": "canboz",
+      "question": "Angular Kolay mı",
+      "solutions": [],
+      "id": 2
+    }
+  ]
+}

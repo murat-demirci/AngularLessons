@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ConvertPipe } from './convert.pipe';
+import { CustomDDirective } from './custom-d.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConvertPipe
+    CustomDDirective
   ],
   imports: [
     BrowserModule,

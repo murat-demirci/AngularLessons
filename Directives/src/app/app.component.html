@@ -1,0 +1,59 @@
+<div class="container text-center my-5">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li 
+      class="page-item"
+      [ngClass]="{disabled:currentPage === 0}">
+        <a 
+        class="page-link" 
+        [href]="'#'+(currentPage+1)" 
+        aria-label="Previous"
+        (click)="currentPage = currentPage-1">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <ng-container *ngFor="let image of images;let i = index">
+        <li 
+      class="page-item"
+      [ngClass]="{active:i === currentPage}"
+      *ngIf="PageIndex(i)">
+        <a 
+        (click)="currentPage = i" 
+        [href]="'#'+(i+1)" 
+        class="page-link">{{i+1}}</a>
+      </li>
+      </ng-container>
+      <li 
+      class="page-item"
+      [ngClass]="{disabled:currentPage === images.length - 1}">
+        <a 
+        class="page-link" 
+        [href]="'#'+(currentPage+1)" 
+        aria-label="Next"
+        (click)="currentPage = currentPage+1">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div>
+    <h4 appCustomD [backgroundColor]="'gray'">{{images[currentPage].title}}</h4>
+    <div>
+      <img [src]="images[currentPage].url">
+    </div>
+  </div>
+  
+  <!-- <div [ngSwitch]="currentPage">
+    <div *ngSwitchCase="0">
+      ilk sayfa
+    </div>
+    <div *ngSwitchCase="1">
+      ikinci sayfa
+    </div>
+    <div *ngSwitchCase="2">
+      ücüncü sayfa
+    </div>
+    <div *ngSwitchDefault>sayfa yok</div>
+  </div> -->
+</div>

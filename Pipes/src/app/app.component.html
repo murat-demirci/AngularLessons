@@ -72,6 +72,24 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Mil</label>
+        <input
+          class="form-control"
+          type="text"
+          (input)="onMilChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>Mil</b></label>
+      <div>
+        {{ miles | convert:""}}
+      </div>
+    </div>
+  </div>
 </div>
 
 {{lessons |json}}

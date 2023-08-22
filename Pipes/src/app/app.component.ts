@@ -15,8 +15,9 @@ export class AppComponent {
     subject:"natural number",
     currentPoint:65
   }
+  miles:number=0;
 
-  onNameChange(event: Event) {
+  onNameChange(event:Event) {
     const target = event.target as HTMLInputElement;
     this.name = target.value;
   }
@@ -36,5 +37,13 @@ export class AppComponent {
   onHeigthChange(event: Event){
     const target = event.target as HTMLInputElement;
     this.heigth = parseFloat(target.value);
+  }
+
+  onMilChange(event:Event){
+    const target = event.target as HTMLInputElement;
+    this.miles = parseFloat(target.value);
+    
+    if(isNaN(this.miles))
+      this.miles = 0;
   }
 }
